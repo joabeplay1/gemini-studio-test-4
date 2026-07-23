@@ -1,0 +1,30 @@
+{
+  "name": "UserSetting",
+  "type": "object",
+  "properties": {
+    "gemini_api_key": {
+      "type": "string",
+      "title": "Chave API Gemini"
+    },
+    "github_token": {
+      "type": "string",
+      "title": "Token GitHub"
+    },
+    "github_username": {
+      "type": "string",
+      "title": "Usu\u00e1rio GitHub"
+    }
+  },
+  "rls": {
+    "create": true,
+    "read": {
+      "created_by_id": "{{user.id}}"
+    },
+    "update": {
+      "created_by_id": "{{user.id}}"
+    },
+    "delete": {
+      "created_by_id": "{{user.id}}"
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "name": "Project",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Nome do Projeto"
+    },
+    "description": {
+      "type": "string",
+      "title": "Descri\u00e7\u00e3o"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "app",
+        "site",
+        "game"
+      ],
+      "default": "app",
+      "title": "Tipo"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "analyzing",
+        "architecting",
+        "generating",
+        "correcting",
+        "testing",
+        "fixing",
+        "completed",
+        "failed"
+      ],
+      "default": "draft",
+      "title": "Status"
+    },
+    "prompt": {
+      "type": "string",
+      "title": "Briefing"
+    },
+    "professional_prompt": {
+      "type": "string",
+      "title": "Prompt Profissional"
+    },
+    "analysis": {
+      "type": "string",
+      "title": "An\u00e1lise"
+    },
+    "architecture": {
+      "type": "string",
+      "title": "Arquitetura"
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "language": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path",
+          "content"
+        ]
+      },
+      "title": "Arquivos"
+    },
+    "corrections": {
+      "type": "string",
+      "title": "Corre\u00e7\u00f5es"
+    },
+    "tests": {
+      "type": "string",
+      "title": "Testes"
+    },
+    "tech_stack": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "title": "Stack Tecnol\u00f3gico"
+    },
+    "github_repo": {
+      "type": "string",
+      "title": "Reposit\u00f3rio GitHub"
+    }
+  },
+  "required": [
+    "name",
+    "type"
+  ]
+}
